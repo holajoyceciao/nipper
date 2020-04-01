@@ -465,6 +465,8 @@ body {
   text-align: center;
   cursor: pointer;
   color: black;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 #main .category .allicon .icon img {
@@ -739,7 +741,7 @@ footer p {
   position: absolute;
   z-index: -10;
   top: -150px;
-  left: -85px;
+  left: -80px;
   opacity: 60%;
 }
 
