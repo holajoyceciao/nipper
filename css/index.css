@@ -737,10 +737,10 @@ footer p {
 }
 
 #a_main .a_container div img {
-  width: 115%;
+  width: 110%;
   position: absolute;
   z-index: -10;
-  top: -95px;
+  top: -100px;
   left: -100px;
   opacity: 60%;
 }
@@ -1000,12 +1000,16 @@ footer p {
 }
 
 #q_main .q_question .f_info input {
+  border: none;
   border-radius: 5px;
   padding: 8px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 #q_main .q_question .f_info input:hover {
-  border: 1px solid #636363;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: white;
 }
 
 #q_main .q_question .f_info div {
