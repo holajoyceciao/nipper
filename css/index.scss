@@ -583,10 +583,10 @@ footer {
       right: 0;
       left: 0;
       bottom: 0;
-      background: url("../images/aboutbanner.png");
+      background: url("../images/f_bg.png");
       background-repeat: no-repeat;
-      background-size: 70%;
-      opacity: 60%;
+      background-size: 100%;
+      opacity: 30%;
       z-index: -1;
     }
 
@@ -599,15 +599,21 @@ footer {
       width: 700px;
       margin: auto;
       padding: $infopad;
+      input {
+        border-radius: 5px;
+        padding: 8px 20px;
+        &:hover {
+          border: 1.5px solid rgb(99, 99, 99);
+        }
+      }
       div {
         width: 500px;
-        display: flex;
-        padding-bottom: 35px;
-        align-items: center;
+        padding-bottom: 20px;
         margin: auto;
         p {
-          margin-right: 20px;
-          display: block;
+          padding: 10px 70px;
+          text-align: left;
+          font-weight: $h4fontwe;
         }
         input {
           height: 30px;
@@ -615,8 +621,52 @@ footer {
           width: 70%;
           border: none;
           border-radius: 5px;
-          box-shadow: 6px 6px 10px rgba(109, 109, 109, 0.5);
+          box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.5);
+          &.msg {
+            height: 150px;
+          }
         }
+      }
+    }
+  }
+}
+.ff_container {
+  @include body;
+  @include flex;
+  align-items: center;
+  padding: $conpad;
+  .list {
+    width: 500px;
+    @include flex;
+    padding-left: 100px;
+    div {
+      flex-basis: (100%/3);
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-weight: $h4fontwe;
+      }
+      a {
+        margin-top: 10px;
+        text-decoration: none;
+        font-size: $fonts;
+        color: $colorbk;
+      }
+      & a:hover {
+        color: $colorb;
+        cursor: pointer;
+      }
+    }
+  }
+  .social-contact {
+    padding-right: 100px;
+    @include flex;
+    a {
+      @include adec;
+      color: $colorbk;
+      margin-left: 50px;
+      &:hover {
+        color: $colorb;
       }
     }
   }
