@@ -721,7 +721,7 @@ footer p {
   line-height: 40px;
   font-size: 20px;
   z-index: 10;
-  padding-right: 150px;
+  padding-right: 110px;
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
   -webkit-transition-duration: 1.5s;
@@ -739,7 +739,7 @@ footer p {
   position: absolute;
   z-index: -10;
   top: -150px;
-  left: -100px;
+  left: -80px;
   opacity: 60%;
 }
 
