@@ -1,0 +1,77 @@
+@mixin body {
+  width: $maxw;
+  margin: auto;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+}
+
+@mixin liner {
+  height: 1.2px;
+  background-color: $hrc;
+  border: none;
+  margin: 0 auto;
+}
+
+@mixin liner2 {
+  height: 1.2px;
+  background-color: $hrcl;
+  border: none;
+  margin: 0 auto;
+}
+
+@mixin imgposition {
+  display: block;
+  margin: auto;
+}
+
+@mixin adec {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+@mixin h2style {
+  font-size: $fonth2;
+  text-align: center;
+}
+
+@mixin parallax {
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin spanlineb {
+  position: absolute;
+  content: "";
+  top: 50%;
+  background: black;
+  width: 50px;
+  height: 2px;
+  left: -50%;
+}
+@mixin spanlinea {
+  position: absolute;
+  content: "";
+  top: 50%;
+  background: black;
+  width: 50px;
+  height: 2px;
+  right: -50%;
+}
+
+@mixin btn {
+  background-color: $colorb;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+  border: none;
+  font-size: $fonts;
+  cursor: pointer;
+}

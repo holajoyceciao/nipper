@@ -1,0 +1,592 @@
+/* -------- 載入模組 -------- */
+@import "reset";
+@import "grid";
+@import "mixin";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500&display=swap");
+
+/* -------- 變數 -------- */
+$fontfam: "Noto Sans TC", sans-serif;
+$fontwe: 300;
+$h4fontwe: 400;
+$fonts: 14px;
+$font20: 20px;
+$fonth2: 35px;
+$imgbanner: 1000px;
+$imglogo: 200px;
+$img190: 190px;
+$imgabout: 450px;
+$imgapp: 130px;
+$imgicon: 100px;
+$colorb: rgb(1, 160, 235);
+$vcolorb: rgba(1, 160, 235, 20%);
+$colorbk: black;
+$hrc: #ccc;
+$hrcl: rgb(233, 233, 233);
+$maxw: 1140px;
+$conpad: 85px 0;
+$infopad: 50px;
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $fontfam;
+  font-weight: $fontwe;
+}
+
+/* ---------------------------- */
+/* -------- index page -------- */
+/* ---------------------------- */
+
+/* -------- header section -------- */
+
+#header {
+  a {
+    color: $colorbk;
+    @include adec;
+  }
+  a:hover {
+    color: $colorb;
+  }
+  .section_1 {
+    margin: auto;
+    @include flex;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+
+    .ii {
+      @include flex;
+      a {
+        color: $colorbk;
+        @include adec;
+        margin-right: 15px;
+      }
+      a:hover {
+        color: $colorb;
+      }
+    }
+  }
+
+  .line-1 {
+    @include liner2;
+  }
+  .line {
+    width: $maxw;
+    @include liner;
+  }
+  .nav {
+    @include flex;
+    width: $maxw;
+    margin: auto;
+    height: 100px;
+    line-height: 100px;
+    list-style-type: none;
+    .select {
+      @include adec;
+      flex-basis: 20%;
+      position: relative;
+      font-weight: $h4fontwe;
+      &:after {
+        opacity: 1;
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 25%;
+        background: rgba(1, 160, 235, 0.2);
+        width: 80px;
+        height: 20px;
+      }
+    }
+    h1 {
+      position: relative;
+      cursor: pointer;
+      flex-basis: 20%;
+      a {
+        @include adec;
+        img {
+          width: $imglogo;
+        }
+      }
+    }
+
+    .lis {
+      @include adec;
+      flex-basis: 20%;
+      position: relative;
+      &:after {
+        opacity: 0;
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 25%;
+        background: rgba(1, 160, 235, 0.2);
+        width: 0px;
+        height: 20px;
+        transition: width 0.5s, opacity 0.5s, transform 0.8s;
+      }
+      &:hover {
+        font-weight: $h4fontwe;
+        color: black;
+        &:after {
+          width: 80px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+/* -------- main section -------- */
+
+#main {
+  .banner-1 {
+    margin: auto;
+    div {
+      img {
+        @include imgposition;
+        width: 100%;
+      }
+    }
+  }
+
+  /* -------- product section -------- */
+
+  .p_container {
+    width: $maxw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $conpad;
+
+    h2 {
+      @include h2style;
+      span {
+        position: relative;
+        &:before {
+          @include spanlineb;
+        }
+        &:after {
+          @include spanlinea;
+        }
+      }
+    }
+
+    .hotproduct {
+      padding: $infopad 0;
+      width: $maxw;
+      .autoplay {
+        width: 100%;
+        .pp {
+          h4 {
+            text-align: center;
+            font-weight: $h4fontwe;
+            line-height: 30px;
+            margin: 20px 0;
+          }
+          p {
+            text-align: center;
+          }
+          img {
+            @include imgposition;
+            width: $img190;
+          }
+        }
+      }
+    }
+  }
+
+  /* -------- 查看更多 section -------- */
+
+  .btn {
+    @include btn;
+    &:hover {
+      box-shadow: 2px 3px 10px rgba(109, 109, 109, 0.5);
+    }
+    a {
+      @include adec;
+      color: white;
+    }
+  }
+
+  /* -------- 視差banner section -------- */
+
+  .banner-2 {
+    @include parallax;
+    background-image: url("../images/banner5.jpg");
+    height: 450px;
+  }
+
+  /* -------- product category section -------- */
+  .category {
+    @include body;
+    padding: $conpad;
+    h2 {
+      @include h2style;
+      span {
+        position: relative;
+        &:before {
+          @include spanlineb;
+        }
+        &:after {
+          @include spanlinea;
+        }
+      }
+    }
+    .allicon {
+      padding: $conpad;
+      @include flex;
+
+      .icon {
+        @include adec;
+        cursor: pointer;
+        color: $colorbk;
+
+        img {
+          @include imgposition;
+          width: $imgicon;
+          padding: 10px;
+          border-radius: 50%;
+          box-shadow: 7px 7px 10px rgba(94, 94, 94, 0.1);
+          transform: scale(1, 1);
+          transition: all 0.5s ease-out;
+          &:hover {
+            box-shadow: none;
+            transform: scale(1.5, 1.5);
+            cursor: pointer;
+          }
+        }
+
+        p {
+          margin-top: 50px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  /* -------- brands section -------- */
+  .brand {
+    @include body;
+    padding: $infopad auto;
+    h2 {
+      @include h2style;
+      span {
+        position: relative;
+        &:before {
+          @include spanlineb;
+        }
+        &:after {
+          @include spanlinea;
+        }
+      }
+    }
+    .bbrand {
+      padding: $conpad;
+      @include flex;
+      a {
+        @include adec;
+        img {
+          width: $img190;
+        }
+      }
+      .wc,
+      .ni,
+      .bu,
+      .be,
+      .di,
+      .sa {
+        filter: grayscale(100%);
+
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+  .line-1 {
+    @include liner;
+  }
+}
+
+/* -------- footer section -------- */
+footer {
+  .f_container {
+    @include body;
+    @include flex;
+    align-items: center;
+    padding: 10px 0px;
+    img {
+      width: $imglogo;
+    }
+    .list {
+      width: 500px;
+      @include flex;
+      div {
+        flex-basis: (100%/3);
+        display: flex;
+        flex-direction: column;
+        h2 {
+          font-weight: $h4fontwe;
+        }
+        a {
+          margin-top: 10px;
+          text-decoration: none;
+          font-size: $fonts;
+          color: $colorbk;
+        }
+        & a:hover {
+          color: $colorb;
+          cursor: pointer;
+        }
+      }
+    }
+    .appdownload {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      a {
+        display: block;
+        margin-top: 10px;
+        img {
+          width: $img190;
+        }
+      }
+      & a:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  /* -------- copyright section -------- */
+
+  .line-1 {
+    @include liner2;
+  }
+  p {
+    font-size: $fonts;
+    padding: 5px 0;
+    text-align: center;
+  }
+}
+
+/* ---------------------------- */
+/* -------- about page -------- */
+/* ---------------------------- */
+
+/* -------- a_main -------- */
+
+#a_main {
+  .a_container {
+    position: relative;
+    @include flex;
+    align-items: center;
+    height: 600px;
+    z-index: -10;
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: url("../images/aboutbanner.png");
+      background-repeat: no-repeat;
+      background-size: 70%;
+      opacity: 60%;
+      z-index: -1;
+    }
+    div {
+      margin-left: auto;
+      position: relative;
+      width: 560px;
+      line-height: 40px;
+      font-size: $font20;
+      z-index: 10;
+      padding-right: 150px;
+      transition-delay: 1s;
+      transition-duration: 1.5s;
+      span {
+        font-weight: $h4fontwe;
+        font-size: 25px;
+        color: $colorb;
+      }
+      img {
+        width: 110%;
+        position: absolute;
+        z-index: -10;
+        top: -150px;
+        left: -100px;
+        opacity: 60%;
+      }
+    }
+  }
+  .line {
+    @include liner;
+  }
+
+  /* -------- feature -------- */
+
+  .feature {
+    @include body;
+    padding: $conpad;
+    h2 {
+      @include h2style;
+      span {
+        position: relative;
+        &:before {
+          @include spanlineb;
+        }
+        &:after {
+          @include spanlinea;
+        }
+      }
+    }
+
+    .specialty {
+      @include flex;
+      padding: 50px 0 20px 0;
+      height: 400px;
+      .top {
+        width: (75%/4);
+        text-align: center;
+        animation-delay: 2.5s;
+        animation-duration: 2s;
+        img {
+          width: $imgicon;
+        }
+        h3 {
+          font-weight: $h4fontwe;
+          font-size: $font20;
+          margin: 25px 0;
+          text-align: center;
+        }
+        p {
+          text-align: left;
+          line-height: 25px;
+        }
+      }
+      .btm {
+        width: (75%/4);
+        text-align: center;
+        align-self: flex-end;
+        animation-delay: 2.5s;
+        animation-duration: 2s;
+        img {
+          width: $imgicon;
+        }
+        h3 {
+          font-weight: $h4fontwe;
+          font-size: $font20;
+          margin: 25px 0;
+          text-align: center;
+        }
+        p {
+          text-align: left;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  /* -------- ni-info -------- */
+
+  .ni-info {
+    @include body;
+    padding: 40px;
+    h2 {
+      font-size: $fonth2;
+    }
+    div {
+      @include flex;
+      padding: 50px 20px;
+
+      #map {
+        width: 500px;
+        height: 300px;
+      }
+      #ni-de {
+        position: relative;
+        width: 450px;
+        flex-direction: column;
+        justify-content: flex-start;
+        h3 {
+          font-weight: $h4fontwe;
+          font-size: 25px;
+          margin: 0 0 20px 0;
+          text-align: left;
+        }
+        p {
+          text-align: left;
+          line-height: 40px;
+        }
+        .btn {
+          position: absolute;
+          @include btn;
+          margin-top: 300px;
+          left: 100px;
+          &:hover {
+            box-shadow: 2px 3px 10px rgba(109, 109, 109, 0.5);
+          }
+          a {
+            @include adec;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------------------- */
+/* -------- faq page ---------- */
+/* ---------------------------- */
+
+#q_main {
+  // background-color: rgba(47, 181, 243, 0.356);
+  .q_container {
+    @include body;
+    @include flex;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: $infopad 0 20px 0;
+    a {
+      @include adec;
+      border: 1px solid rgba(220, 220, 220, 0.16);
+      border-radius: 10px;
+      box-shadow: 6px 6px 10px;
+      font-size: $font20;
+      font-weight: $h4fontwe;
+      height: 150px;
+      line-height: 150px;
+      color: rgb(82, 82, 82);
+      flex-basis: (90%/3);
+      opacity: 50%;
+      &:hover {
+        background-color: $vcolorb;
+        opacity: 80%;
+        color: white;
+      }
+    }
+  }
+  .q_question {
+    @include body;
+    text-align: center;
+    padding: $infopad;
+    h3 {
+      font-size: $font20;
+      font-weight: $h4fontwe;
+      line-height: 30px;
+    }
+    .f_info {
+      margin: auto;
+      div {
+        width: 200px;
+        @include flex;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
