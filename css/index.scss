@@ -611,14 +611,15 @@ footer {
         padding-bottom: 20px;
         margin: auto;
         p {
-          padding: 10px 70px;
+          padding: 10px 50px;
           text-align: left;
           font-weight: $h4fontwe;
         }
         input {
+          font-size: $fonts;
           height: 30px;
           padding: 5px 10px;
-          width: 70%;
+          width: 80%;
           border: none;
           border-radius: 5px;
           box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.5);

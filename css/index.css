@@ -1015,15 +1015,16 @@ footer p {
 }
 
 #q_main .q_question .f_info div p {
-  padding: 10px 70px;
+  padding: 10px 50px;
   text-align: left;
   font-weight: 400;
 }
 
 #q_main .q_question .f_info div input {
+  font-size: 14px;
   height: 30px;
   padding: 5px 10px;
-  width: 70%;
+  width: 80%;
   border: none;
   border-radius: 5px;
   -webkit-box-shadow: 3px 3px 8px rgba(128, 128, 128, 0.5);
