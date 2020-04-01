@@ -801,8 +801,8 @@ footer p {
 #a_main .feature .specialty .top {
   width: 18.75%;
   text-align: center;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
@@ -828,8 +828,8 @@ footer p {
   text-align: center;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
 }
