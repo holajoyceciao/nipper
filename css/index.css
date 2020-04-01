@@ -740,7 +740,7 @@ footer p {
   width: 115%;
   position: absolute;
   z-index: -10;
-  top: -120px;
+  top: -100px;
   left: -100px;
   opacity: 60%;
 }
